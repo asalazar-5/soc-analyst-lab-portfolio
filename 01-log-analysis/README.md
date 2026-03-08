@@ -103,4 +103,21 @@ The goal of this lab is to simulate a SOC-style investigation by analyzing authe
 - Correlate authentication logs with network logs.
 - Automate detection of repeated failed logins.
 
+---
+
+## Screenshots
+
+### Splunk Dashboard
+![Splunk Dashboard](screenshots/splunk-dashboard.png)
+
+### Windows Security Logs Ingested
+![Windows Security Logs](screenshots/windows-security-logs.png)
+
+### Failed Login Attempts (Event ID 4625)
+![Failed Login Events](screenshots/failed-login-events.png)
+
+### Brute Force Detection Query
+![Brute Force Detection](screenshots/bruteforce-detection.png)
+ 
+
 
