@@ -83,4 +83,17 @@ Attack simulation in a controlled lab environment
 
 ## Screenshots
 
-(Insert screenshots here)
+### Kali Linux IP Address
+![Kali IP](screenshots/kali-ip.png)
+
+### Windows Host IP Address
+![Windows IP](screenshots/windows-ip.png)
+
+### Nmap SYN Scan
+![Nmap SYN Scan](screenshots/nmap-syn-scan.png)
+
+### Nmap Service Detection Scan
+![Nmap Service Scan](screenshots/nmap-service-scan.png)
+
+### Windows Event Viewer Failed Logins
+![Event Viewer Failed Logins](screenshots/event-viewer-failed-logins.png)
