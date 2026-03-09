@@ -68,4 +68,14 @@ SIEM investigation workflow
 
 ## Screenshots
 
-(Add screenshots here)
+### Failed Login Attempts (Event Viewer)
+![Failed Login Event 4625](screenshots/eventviewer-4625.png)
+
+### Splunk Search – Failed Login Detection
+![Splunk EventCode 4625](screenshots/splunk-eventcode4625.png)
+
+### Splunk Query – Brute Force Detection
+![Brute Force Detection Query](screenshots/splunk-bruteforce-query.png)
+
+### Splunk Results – Repeated Failed Logins
+![Brute Force Results](screenshots/splunk-bruteforce-results.png)
