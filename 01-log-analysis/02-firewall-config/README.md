@@ -1,113 +1,88 @@
-# Lab 02 – Firewall Configuration & Network Security (SOC / Security Analyst Focus)
+# Lab 02 – Port Scan Detection & Network Reconnaissance
 
 ## Objective
-The goal of this lab is to demonstrate hands-on experience configuring firewall rules, enforcing least-privilege network access, and validating security controls through traffic analysis. This lab mirrors real-world SOC and Security Analyst tasks related to network security monitoring and prevention.
+
+This lab demonstrates how network reconnaissance can be performed using Nmap and how a SOC analyst can identify open services running on a host.
+
+The goal was to simulate attacker behavior by performing a port scan against a Windows system to enumerate exposed services.
 
 ---
 
 ## Tools Used
-- pfSense Firewall
-- Kali Linux
-- Windows or Linux Virtual Machine
-- Nmap (for traffic and port scanning)
+
+* Kali Linux
+* Nmap
+* VirtualBox
+* Windows Host System
 
 ---
 
 ## Lab Environment
-- pfSense VM acting as the firewall
-- One internal Windows/Linux VM behind the firewall
-- Kali Linux VM simulating external traffic
-- Virtual network configured to route traffic through pfSense
+
+Attacker: Kali Linux VM
+Target: Windows host machine running Splunk
 
 ---
 
-## Step-by-Step Implementation
+## Step 1 – Identify Network Address
 
-### Step 1: Deploy pfSense Firewall
-1. Install pfSense in a virtual machine.
-2. Configure WAN and LAN interfaces.
-3. Verify internal machines route traffic through pfSense.
+The Kali system IP address was identified using:
 
-📸 **Screenshot:** pfSense dashboard showing active interfaces.
+ip a
 
----
+The Windows host IP address was identified using:
 
-### Step 2: Establish Baseline Connectivity
-1. From the internal VM, verify internet connectivity.
-2. From Kali Linux, verify access to the firewall IP.
-3. Document baseline allowed traffic.
-
-📸 **Screenshot:** Successful ping or connectivity test.
+ipconfig
 
 ---
 
-### Step 3: Configure Firewall Rules
-1. Create firewall rules to:
-   - Allow HTTP/HTTPS traffic (ports 80, 443)
-   - Block unnecessary services (SSH, RDP)
-2. Apply rules using a least-privilege approach.
-3. Ensure rule order enforces proper priority.
+## Step 2 – Perform SYN Scan
 
-📸 **Screenshot:** Firewall rules table in pfSense.
+The following command was used to perform a stealth SYN scan:
 
----
+nmap -sS <target-ip>
 
-### Step 4: Validate Rules Using Port Scanning
-1. From Kali Linux, run Nmap scans against the internal VM.
-2. Verify:
-   - Allowed ports are accessible
-   - Blocked ports are denied
-3. Confirm firewall behavior matches expectations.
-
-📸 **Screenshot:** Nmap scan results showing blocked and allowed ports.
+This scan identifies open ports without completing the full TCP handshake.
 
 ---
 
-### Step 5: Analyze Firewall Logs
-1. Review pfSense logs for blocked connection attempts.
-2. Identify:
-   - Source IP addresses
-   - Target ports
-   - Time of attempted access
-3. Correlate scan activity with firewall log entries.
+## Step 3 – Service Enumeration
 
-📸 **Screenshot:** Firewall logs showing denied traffic.
+To identify running services, the following command was executed:
 
----
+nmap -sV <target-ip>
 
-## Findings
-- Firewall rules successfully restricted unnecessary services.
-- Blocked traffic attempts were clearly logged and traceable.
-- Network segmentation reduced attack surface.
+This revealed several active services including:
+
+135/tcp – Microsoft RPC
+139/tcp – NetBIOS Session Service
+445/tcp – Microsoft SMB
+8000/tcp – Splunk Web Interface
+8089/tcp – Splunk Management API
 
 ---
 
-## Lessons Learned
-- Firewall rule order is critical for proper enforcement.
-- Least-privilege network access significantly reduces risk.
-- Log analysis is essential for validating security controls.
+## Security Analysis
+
+The scan identified several exposed services commonly found on Windows systems.
+
+SMB and NetBIOS services are often targeted in lateral movement attacks, while exposed management interfaces such as Splunk could present administrative access points if improperly secured.
+
+SOC analysts frequently monitor for port scanning behavior as it is often an early indicator of reconnaissance activity.
 
 ---
 
-## Security+ Alignment
-- Network security and segmentation
-- Firewall configuration and monitoring
-- Access control and least privilege
-- Log review and security validation
+## Skills Demonstrated
+
+Network reconnaissance
+Port scanning detection
+Service enumeration
+Attack simulation in a controlled lab environment
 
 ---
 
-## Interview Talking Points
-- “I configured pfSense firewall rules to enforce least-privilege access.”
-- “I validated firewall effectiveness using Nmap scanning from an external system.”
-- “I analyzed firewall logs to confirm blocked traffic and identify potential threats.”
-- “This lab reflects how SOC teams verify and monitor network security controls.”
+## Screenshots
 
----
-
-## Next Steps
-- Add IDS/IPS functionality (Snort or Suricata).
-- Create alerts for repeated blocked connection attempts.
-- Correlate firewall logs with SIEM data.
+(Insert screenshots here)
 
 
