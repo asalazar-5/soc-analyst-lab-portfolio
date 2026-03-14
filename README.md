@@ -48,6 +48,15 @@ This portfolio reflects my transition from **enterprise IT support into cybersec
 
 This lab simulates a basic **SOC monitoring environment** where security logs are generated on a Windows host, analyzed in Splunk, and investigated using threat hunting techniques. Kali Linux is used to perform reconnaissance, vulnerability scanning, and simulated attack activity.
 
+## Quick Lab Index
+
+| Lab        | Topic                                  | Key Skills                                  | Link                                  |
+| ---------- | -------------------------------------- | ------------------------------------------- | ------------------------------------- |
+| **Lab 01** | Log Analysis & Incident Detection      | Splunk, Event Logs, Authentication Analysis | [Open Lab](01-log-analysis)           |
+| **Lab 02** | Network Reconnaissance                 | Nmap, Port Scanning, Service Enumeration    | [Open Lab](02-network-reconnaissance) |
+| **Lab 03** | Brute Force Attack Detection           | Windows Event Logs, Splunk Investigation    | [Open Lab](03-brute-force-detection)  |
+| **Lab 04** | Vulnerability Scanning & Risk Analysis | Nmap Scripts, CVE Identification            | [Open Lab](04-vulnerability-scanning) |
+| **Lab 05** | Threat Hunting Investigation           | Splunk Queries, Authentication Analysis     | [Open Lab](05-threat-hunting-splunk)  |
 
 ---
 
