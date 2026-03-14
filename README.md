@@ -2,7 +2,7 @@
 
 ![Splunk](https://img.shields.io/badge/SIEM-Splunk-orange)
 ![Kali Linux](https://img.shields.io/badge/Platform-Kali_Linux-blue)
-![Windows](https://img.shields.io/badge/OS-Windows_10-blue)
+![Windows](https://img.shields.io/badge/OS-Windows_11-blue)
 ![Nmap](https://img.shields.io/badge/Tool-Nmap-red)
 ![Cybersecurity](https://img.shields.io/badge/Focus-SOC_Analyst-green)
 ![Threat Hunting](https://img.shields.io/badge/Security-Threat_Hunting-darkgreen)
