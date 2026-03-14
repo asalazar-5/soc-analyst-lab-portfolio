@@ -7,6 +7,11 @@
 ![Cybersecurity](https://img.shields.io/badge/Focus-SOC_Analyst-green)
 ![Threat Hunting](https://img.shields.io/badge/Security-Threat_Hunting-darkgreen)
 
+## Portfolio Overview
+
+This repository documents a series of **hands-on cybersecurity labs designed to simulate SOC analyst workflows**.
+
+The labs focus on detecting suspicious activity, investigating security events, and analyzing network behavior using industry tools such as **Splunk, Nmap, and Windows Security Logs**.
 
 Welcome to my **Security Lab Portfolio**.
 This repository contains hands-on cybersecurity labs aligned with **SOC Analyst, Security Analyst, and Blue Team roles**.
