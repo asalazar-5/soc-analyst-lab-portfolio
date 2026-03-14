@@ -13,6 +13,42 @@ These labs demonstrate practical experience in:
 
 This portfolio reflects my transition from **enterprise IT support into cybersecurity**, combining 6+ years of IT experience with practical security investigations.
 
+## Lab Environment Architecture
+
+```
+            ┌───────────────────────┐
+            │      Kali Linux VM     │
+            │  (Attacker / Scanner)  │
+            │                        │
+            │  - Nmap Recon         │
+            │  - Vulnerability Scan │
+            └───────────┬───────────┘
+                        │
+                        │ Network Traffic
+                        │
+            ┌───────────▼───────────┐
+            │     Windows Host       │
+            │     (Target System)    │
+            │                        │
+            │  - Authentication Logs │
+            │  - Event Viewer Logs   │
+            │  - Security Events     │
+            └───────────┬───────────┘
+                        │
+                        │ Log Forwarding
+                        │
+            ┌───────────▼───────────┐
+            │       Splunk SIEM      │
+            │                        │
+            │  - Log Ingestion       │
+            │  - Threat Detection    │
+            │  - Threat Hunting      │
+            └───────────────────────┘
+```
+
+This lab simulates a basic **SOC monitoring environment** where security logs are generated on a Windows host, analyzed in Splunk, and investigated using threat hunting techniques. Kali Linux is used to perform reconnaissance, vulnerability scanning, and simulated attack activity.
+
+
 ---
 
 # Labs Included
