@@ -108,6 +108,20 @@ Security analysts analyze patterns across logs to identify indicators of comprom
 ### Splunk Failed Login Investigation
 ![Splunk Failed Login Search](screenshots/splunk-failed-logins.png)
 
+
+## Screenshots
+
+### Failed Login Investigation
+![Failed Logins](screenshots/splunk-failed-logins.png)
+
+### Threat Hunting Query
+![Threat Hunting Query](screenshots/threat-hunting-query.png)
+
+### Process Creation Investigation
+![Process Investigation](screenshots/process-investigation.png)
+
+### PowerShell Threat Hunt
+![PowerShell Investigation](screenshots/powershell-threat-hunt.png)
 ### Splunk Threat Hunting Query
 ![Threat Hunting Query](screenshots/threat-hunting-query.png)
 
