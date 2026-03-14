@@ -6,6 +6,9 @@
 ![Nmap](https://img.shields.io/badge/Tool-Nmap-red)
 ![Cybersecurity](https://img.shields.io/badge/Focus-SOC_Analyst-green)
 ![Threat Hunting](https://img.shields.io/badge/Security-Threat_Hunting-darkgreen)
+![Security+](https://img.shields.io/badge/Certification-Security%2B-red)
+
+---
 
 ## Portfolio Overview
 
